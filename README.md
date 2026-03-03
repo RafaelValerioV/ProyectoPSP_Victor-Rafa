@@ -51,3 +51,6 @@ Una vez levantado el proyecto, desde cualquier PC de la misma red se puede acced
 https://PONER_IPv4:5173
 ```
 La primera vez el navegador mostrará un aviso de certificado autofirmado. Pulsa Avanzado -> Continuar para aceptarlo. No es necesario instalar ningún certificado en los equipos clientes.
+
+## Aviso sobre "Conexión no segura"
+Al acceder a la aplicación, el navegador mostrará un aviso de que la conexión no es segura. Esto ocurre porque el certificado SSL es **autofirmado** y no está emitido por una Autoridad de Certificación (CA) reconocida. Es el comportamiento normal en entornos de desarrollo local. La conexión sigue siendo HTTPS y el tráfico viaja cifrado; simplemente el navegador no puede verificar la identidad del servidor. Basta con aceptar la excepción para continuar usando la aplicación con normalidad.
