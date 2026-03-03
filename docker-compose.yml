@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: drivepsp-db
+    environment:
+      POSTGRES_DB: drivepsp
+      POSTGRES_USER: drivepsp
+      POSTGRES_PASSWORD: drivepsp_dev
+    ports:
+      - "5437:5432"
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    restart: unless-stopped
+volumes:
+  pg-data:

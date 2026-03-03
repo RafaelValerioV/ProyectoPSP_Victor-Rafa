@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: drivepsp-backend
+  datasource:
+    url: jdbc:postgresql://localhost:5437/drivepsp
+    username: drivepsp
+    password: drivepsp_dev
+  jpa:
+    hibernate:
+      ddl-auto: update
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 55MB
+
+server:
+  port: 8443
+
+drivepsp:
+  ssl:
+    keystore-path: certs/servidor.p12
+    keystore-password: ${SSL_KEYSTORE_PASSWORD:123456}
+  jwt:
+    secret: ${JWT_SECRET:clave-secreta-desarrollo-drivepsp-2025}
+    expiration: 86400000
+  encryption:
+    secret: ${ENCRYPTION_SECRET:clave-aes-desarrollo-drivepsp-32b!}
+  storage:
+    base-path: ${STORAGE_PATH:./data/storage}
+    server-limit-mb: 500
+    user-limit-mb: 100

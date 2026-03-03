@@ -1,0 +1,26 @@
+# Maven
+drivepsp-backend/target/
+drivepsp-backend/.mvn/wrapper/maven-wrapper.jar
+
+# Node
+drivepsp-frontend/node_modules/
+drivepsp-frontend/dist/
+
+# Certificados y claves
+drivepsp-backend/certs/
+
+# Datos de almacenamiento local
+drivepsp-backend/data/
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Variables de entorno
+.env
+.env.local
